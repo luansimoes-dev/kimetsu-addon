@@ -5,9 +5,9 @@ license="Not specified"
 [[mods]]
 modId="kimetsuaddon"
 version="1.0.0"
-displayName="Kimetsu Addon"
-description="Addon para o mod Kimetsu no Yaiba"
-authors="Seu Nome"
+displayName="Kimetsu Complements"
+description="Add-on for Kimetsu no Yaiba mod"
+authors="..."
 
 [[dependencies.kimetsuaddon]]
     modId="forge"
@@ -26,6 +26,6 @@ authors="Seu Nome"
 [[dependencies.kimetsuaddon]]
     modId="kimetsunoyaiba"
     mandatory=true
-    versionRange="[38.2]"
+    versionRange="[38,)"
     ordering="AFTER"
     side="BOTH"

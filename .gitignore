@@ -1,2 +1,37 @@
-.gradle/
-build/
+# Code Editor/IDEs/related
+## Eclipse
+bin
+*.launch
+.settings
+.metadata
+.project
+eclipse
+## JetBrains
+out
+*.ipr
+*.iws
+*.iml
+.idea
+## Visual Studio Code
+.vscode
+*.code-workspace
+## Zed
+zed
+## etc.
+*.sw*
+
+# Gradle
+build
+.gradle
+
+# Java/Forge
+run
+.classpath
+
+# Misc
+/*[Uu][Ss][Ee][Rr]*
+.env
+.hidden
+.DS_Store
+Thumbs.db
+desktop.ini

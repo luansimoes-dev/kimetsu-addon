@@ -1,24 +1,17 @@
-buildscript {
-    repositories {
-        maven { url = 'https://maven.minecraftforge.net' }
-        mavenCentral()
-    }
-    dependencies {
-        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '4.1.+', changing: true
-    }
+plugins {
+    id 'net.minecraftforge.gradle' version '5.1.+'
+    id 'eclipse'
+    id 'maven-publish'
 }
 
-apply plugin: 'net.minecraftforge.gradle'
-apply plugin: 'eclipse'
-apply plugin: 'maven-publish'
-
 version = '1.0.0'
-group = 'com.seuaddon.kimetsuaddon'
-archivesBaseName = 'kimetsu-addon'
+group = 'org.kimetsuaddondevs.kimetsuaddon'
+archivesBaseName = 'kimetsuaddon'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(8)
 
 minecraft {
+    // We are limited to official mappings for now.
     mappings channel: 'official', version: '1.16.5'
     
     runs {
@@ -45,32 +38,56 @@ minecraft {
                 }
             }
         }
+
+        data {
+            workingDirectory project.file('run')
+            property 'forge.logging.markers', 'REGISTRIES'
+            property 'forge.logging.console.level', 'debug'
+
+            args '--mod', 'kimetsuaddon', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+
+            mods {
+                kimetsuaddon {
+                    source sourceSets.main
+                }
+            }
+        }
     }
 }
 
+sourceSets.main.resources { srcDir 'src/generated/resources' }
+
 repositories {
     mavenCentral()
-    flatDir {
-        dirs 'libs'
+
+    exclusiveContent {
+        forRepository {
+            maven {
+                url "https://cursemaven.com"
+            }
+        }
+        filter {
+            includeGroup "curse.maven"
+        }
     }
 }
 
 dependencies {
     minecraft 'net.minecraftforge:forge:1.16.5-36.2.34'
     
-    // Dependência do Kimetsu no Yaiba
-    implementation fg.deobf("orca.kimetsunoyaiba:kimetsunoyaiba:38.2")
+    // Kimetsu no Yaiba dependency (https://www.curseforge.com/minecraft/mc-mods/demonslayer/files/4578375)
+    implementation "curse.maven:demonslayer-471263:4578375"
 }
 
 jar {
     manifest {
         attributes([
             "Specification-Title": "kimetsuaddon",
-            "Specification-Vendor": "seuaddon",
+            "Specification-Vendor": "kimetsuaddondevs",
             "Specification-Version": "1",
             "Implementation-Title": project.name,
             "Implementation-Version": "${version}",
-            "Implementation-Vendor": "seuaddon",
+            "Implementation-Vendor": "kimetsuaddondevs",
             "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }
