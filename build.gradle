@@ -60,23 +60,22 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 repositories {
     mavenCentral()
 
-    exclusiveContent {
-        forRepository {
-            maven {
-                url "https://cursemaven.com"
-            }
-        }
-        filter {
-            includeGroup "curse.maven"
-        }
+    flatDir {
+        dirs 'libs'
     }
 }
 
 dependencies {
     minecraft 'net.minecraftforge:forge:1.16.5-36.2.34'
     
-    // Kimetsu no Yaiba dependency (https://www.curseforge.com/minecraft/mc-mods/demonslayer/files/4578375)
-    implementation "curse.maven:demonslayer-471263:4578375"
+    /*
+       Kimetsu no Yaiba dependency.
+       The .jar in libs/ is *NOT* the original file,
+       it is modified to be a development dependency.
+       Based on file:
+         https://www.curseforge.com/minecraft/mc-mods/demonslayer/files/4578375
+    */
+    implementation ":kimetsunoyaiba-dev"
 }
 
 jar {
