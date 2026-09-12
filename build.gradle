@@ -104,7 +104,7 @@ jar.finalizedBy('reobfJar')
 publishing {
     publications {
         mavenJava(MavenPublication) {
-            artifactId = "${archivesBaseName}-${version}_forge-1.16.5-36.2.34"
+            artifactId = "${archivesBaseName}_forge-1.16.5-36.2"
             artifact jar
         }
     }
