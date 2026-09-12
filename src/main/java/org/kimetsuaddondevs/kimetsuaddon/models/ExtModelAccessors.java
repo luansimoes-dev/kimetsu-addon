@@ -26,6 +26,16 @@ public class ExtModelAccessors {
         }
     }
 
+    public static class SabitoMaskItem {
+        public static ExtModelAccessor Modelsabito_mask() {
+            net.mcreator.kimetsunoyaiba.item.SabitoMaskItem.Modelsabito_mask m = new net.mcreator.kimetsunoyaiba.item.SabitoMaskItem.Modelsabito_mask();
+            return (ExtModelAccessor) m;
+        }
+
+        private SabitoMaskItem() {
+        }
+    }
+
     protected ExtModelAccessors() {
     }
 }

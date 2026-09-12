@@ -31,12 +31,15 @@ public class ExtAcArmorItem extends ArmorItem {
         if (modelAccessor != null) {
             BipedModel<?> armorModel = new BipedModel<>(1.0F);
 
+            final ModelRenderer head = modelAccessor.extAccessHead();
             final ModelRenderer body = modelAccessor.extAccessBody();
             final ModelRenderer leftArm = modelAccessor.extAccessLeftArm();
             final ModelRenderer rightArm = modelAccessor.extAccessRightArm();
             final ModelRenderer leftLeg = modelAccessor.extAccessLeftLeg();
             final ModelRenderer rightLeg = modelAccessor.extAccessRightLeg();
 
+            if (head != null)
+                armorModel.head = head;
             if (body != null)
                 armorModel.body = body;
             if (leftArm != null)

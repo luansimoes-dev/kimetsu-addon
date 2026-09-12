@@ -3,6 +3,10 @@ package org.kimetsuaddondevs.kimetsuaddon.models;
 import net.minecraft.client.renderer.model.ModelRenderer;
 
 public interface ExtModelAccessor {
+    public default ModelRenderer extAccessHead() {
+        return null;
+    }
+
     public default ModelRenderer extAccessBody() {
         return null;
     }

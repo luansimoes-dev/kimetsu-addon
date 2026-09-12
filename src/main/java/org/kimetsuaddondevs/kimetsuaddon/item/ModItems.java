@@ -14,6 +14,8 @@ public class ModItems {
 
     public static final Item CLOTHES_UROKODAKI_CHESTPLATE;
 
+    public static final Item TOMIOKA_MASK;
+
     static {
         {
             Item item = new ExtAcArmorItem(
@@ -44,6 +46,16 @@ public class ModItems {
                     .setTexture("textures/models/clothes_urokodaki_chestplate.png");
 
             CLOTHES_UROKODAKI_CHESTPLATE = registerItem("clothes_urokodaki_chestplate", item);
+        }
+        {
+            Item item = new ExtAcArmorItem(
+                    ModArmorMaterials.GENERIC_CLOTHES,
+                    EquipmentSlotType.HEAD,
+                    new Item.Properties())
+                    .setModelAccessor(ExtModelAccessors.SabitoMaskItem::Modelsabito_mask)
+                    .setTexture("textures/models/tomioka_mask.png");
+
+            TOMIOKA_MASK = registerItem("tomioka_mask", item);
         }
     }
 

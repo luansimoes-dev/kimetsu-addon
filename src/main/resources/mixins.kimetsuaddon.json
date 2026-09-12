@@ -3,7 +3,8 @@
   "mixins": [
     "models.MIXIN_UniformZenitsuItem_Modelclothes_tomioka",
     "models.MIXIN_UniformZenitsuItem_Modeluniform_boots",
-    "models.MIXIN_ClothesKokushiboItem_Modelclothes"
+    "models.MIXIN_ClothesKokushiboItem_Modelclothes",
+    "models.MIXIN_SabitoMaskItem_Modelsabito_mask"
   ],
   "client": [],
   "server": []
