@@ -1,5 +1,6 @@
 plugins {
     id 'net.minecraftforge.gradle' version '5.1.+'
+    id 'org.parchmentmc.librarian.forgegradle' version '1.+'
     id 'org.spongepowered.mixin' version '0.7.+'
     id 'eclipse'
     id 'maven-publish'
@@ -12,8 +13,7 @@ archivesBaseName = 'kimetsuaddon'
 java.toolchain.languageVersion = JavaLanguageVersion.of(8)
 
 minecraft {
-    // We are limited to official mappings for now.
-    mappings channel: 'official', version: '1.16.5'
+    mappings channel: 'parchment', version: '2022.03.06-1.16.5'
     
     runs {
         client {
