@@ -22,7 +22,7 @@ public class ModItems {
             Item item = new ExtAcArmorItem(
                     ModArmorMaterials.UNIFORM_KAIGAKU,
                     EquipmentSlotType.CHEST,
-                    new Item.Properties())
+                    new Item.Properties().tab(ModItemGroups.TAB_MAIN))
                     .setModelAccessor(ExtModelAccessors.UniformZenitsuItem::Modelclothes_tomioka)
                     .setTexture("textures/models/uniform_kaigaku_chestplate.png");
 
@@ -32,7 +32,7 @@ public class ModItems {
             Item item = new ExtAcArmorItem(
                     ModArmorMaterials.UNIFORM_KAIGAKU,
                     EquipmentSlotType.FEET,
-                    new Item.Properties())
+                    new Item.Properties().tab(ModItemGroups.TAB_MAIN))
                     .setModelAccessor(ExtModelAccessors.UniformZenitsuItem::Modeluniform_boots)
                     .setTexture("textures/models/uniform_kaigaku_boots.png");
 
@@ -42,7 +42,7 @@ public class ModItems {
             Item item = new ExtAcArmorItem(
                     ModArmorMaterials.GENERIC_CLOTHES,
                     EquipmentSlotType.CHEST,
-                    new Item.Properties())
+                    new Item.Properties().tab(ModItemGroups.TAB_MAIN))
                     .setModelAccessor(ExtModelAccessors.ClothesKokushiboItem::Modelclothes)
                     .setTexture("textures/models/clothes_urokodaki_chestplate.png");
 
@@ -52,7 +52,7 @@ public class ModItems {
             Item item = new ExtAcArmorItem(
                     ModArmorMaterials.GENERIC_CLOTHES,
                     EquipmentSlotType.HEAD,
-                    new Item.Properties())
+                    new Item.Properties().tab(ModItemGroups.TAB_MAIN))
                     .setModelAccessor(ExtModelAccessors.SabitoMaskItem::Modelsabito_mask)
                     .setTexture("textures/models/tomioka_mask.png");
 
@@ -62,7 +62,7 @@ public class ModItems {
             Item item = new ExtAcArmorItem(
                     ModArmorMaterials.GENERIC_CLOTHES,
                     EquipmentSlotType.HEAD,
-                    new Item.Properties())
+                    new Item.Properties().tab(ModItemGroups.TAB_MAIN))
                     .setModelAccessor(ExtModelAccessors.SabitoMaskItem::Modelsabito_mask)
                     .setTexture("textures/models/tanjiro_mask.png");
 
