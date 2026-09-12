@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "kimetsuaddon:item/uniform_kaigaku_chestplate"
+  }
+}
