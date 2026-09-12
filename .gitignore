@@ -27,6 +27,7 @@ build
 # Java/Forge
 run
 .classpath
+mcmodsrepo/
 
 # Misc
 /*[Uu][Ss][Ee][Rr]*
