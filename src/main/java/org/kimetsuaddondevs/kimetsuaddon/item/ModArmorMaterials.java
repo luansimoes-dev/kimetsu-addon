@@ -11,6 +11,50 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 public class ModArmorMaterials {
     public static final IArmorMaterial UNIFORM_KAIGAKU = createUniform("uniform_kaigaku", 576, 2.0F);
 
+    public static final IArmorMaterial GENERIC_CLOTHES = new IArmorMaterial() {
+        @Override
+        public int getDurabilityForSlot(EquipmentSlotType pSlot) {
+            return 576;
+        }
+
+        @Override
+        public int getDefenseForSlot(EquipmentSlotType pSlot) {
+            return 2;
+        }
+
+        @Override
+        public int getEnchantmentValue() {
+            return 15;
+        }
+
+        @Override
+        public SoundEvent getEquipSound() {
+            return SoundEvents.ARMOR_EQUIP_LEATHER;
+        }
+
+        @Override
+        public Ingredient getRepairIngredient() {
+            return Ingredient.EMPTY;
+        }
+
+        @Override
+        @OnlyIn(Dist.CLIENT)
+        public String getName() {
+            return "generic_clothes";
+        }
+
+        @Override
+        public float getToughness() {
+            return 0.0F;
+        }
+
+        @Override
+        public float getKnockbackResistance() {
+            return 0.0F;
+        }
+        
+    };
+
     private static IArmorMaterial createUniform(String name, int durability, float toughness) {
         return new IArmorMaterial() {
             @Override

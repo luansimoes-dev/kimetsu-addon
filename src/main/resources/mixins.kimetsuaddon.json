@@ -2,7 +2,8 @@
   "package": "org.kimetsuaddondevs.kimetsuaddon.mixins",
   "mixins": [
     "models.MIXIN_UniformZenitsuItem_Modelclothes_tomioka",
-    "models.MIXIN_UniformZenitsuItem_Modeluniform_boots"
+    "models.MIXIN_UniformZenitsuItem_Modeluniform_boots",
+    "models.MIXIN_ClothesKokushiboItem_Modelclothes"
   ],
   "client": [],
   "server": []

@@ -16,6 +16,16 @@ public class ExtModelAccessors {
         }
     }
 
+    public static class ClothesKokushiboItem {
+        public static ExtModelAccessor Modelclothes() {
+            net.mcreator.kimetsunoyaiba.item.ClothesKokushiboItem.Modelclothes m = new net.mcreator.kimetsunoyaiba.item.ClothesKokushiboItem.Modelclothes();
+            return (ExtModelAccessor) m;
+        }
+
+        private ClothesKokushiboItem() {
+        }
+    }
+
     protected ExtModelAccessors() {
     }
 }
