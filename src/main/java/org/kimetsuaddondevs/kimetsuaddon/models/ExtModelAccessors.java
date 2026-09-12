@@ -7,6 +7,11 @@ public class ExtModelAccessors {
             return (ExtModelAccessor) m;
         }
 
+        public static ExtModelAccessor Modeluniform_boots() {
+            net.mcreator.kimetsunoyaiba.item.UniformZenitsuItem.Modeluniform_boots m = new net.mcreator.kimetsunoyaiba.item.UniformZenitsuItem.Modeluniform_boots();
+            return (ExtModelAccessor) m;
+        }
+
         private UniformZenitsuItem() {
         }
     }

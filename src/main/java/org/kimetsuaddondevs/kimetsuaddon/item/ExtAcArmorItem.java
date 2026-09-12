@@ -4,6 +4,7 @@ import java.util.function.Supplier;
 import org.kimetsuaddondevs.kimetsuaddon.ModMain;
 import org.kimetsuaddondevs.kimetsuaddon.models.ExtModelAccessor;
 import net.minecraft.client.renderer.entity.model.BipedModel;
+import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.inventory.EquipmentSlotType;
@@ -30,9 +31,23 @@ public class ExtAcArmorItem extends ArmorItem {
         if (modelAccessor != null) {
             BipedModel<?> armorModel = new BipedModel<>(1.0F);
 
-            armorModel.body = modelAccessor.extAccessBody();
-            armorModel.leftArm = modelAccessor.extAccessLeftArm();
-            armorModel.rightArm = modelAccessor.extAccessRightArm();
+            final ModelRenderer body = modelAccessor.extAccessBody();
+            final ModelRenderer leftArm = modelAccessor.extAccessLeftArm();
+            final ModelRenderer rightArm = modelAccessor.extAccessRightArm();
+            final ModelRenderer leftLeg = modelAccessor.extAccessLeftLeg();
+            final ModelRenderer rightLeg = modelAccessor.extAccessRightLeg();
+
+            if (body != null)
+                armorModel.body = body;
+            if (leftArm != null)
+                armorModel.leftArm = leftArm;
+            if (rightArm != null)
+                armorModel.rightArm = rightArm;
+            if (leftLeg != null)
+                armorModel.leftLeg = leftLeg;
+            if (rightLeg != null)
+                armorModel.rightLeg = rightLeg;
+
             armorModel.crouching = entityLiving.isShiftKeyDown();
             armorModel.riding = _default.riding;
             armorModel.young = entityLiving.isBaby();
