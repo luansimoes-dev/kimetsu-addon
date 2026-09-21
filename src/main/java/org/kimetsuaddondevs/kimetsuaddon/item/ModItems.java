@@ -11,6 +11,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class ModItems {
     public static final Item UNIFORM_KAIGAKU_CHESTPLATE;
     public static final Item UNIFORM_KAIGAKU_BOOTS;
+    public static final Item UNIFORM_KANROJI;
 
     public static final Item CLOTHES_UROKODAKI_CHESTPLATE;
     public static final Item CLOTHES_KAIGAKU;
@@ -41,6 +42,16 @@ public class ModItems {
                     .setTexture("textures/models/uniform_kaigaku_boots.png");
 
             UNIFORM_KAIGAKU_BOOTS = registerItem("uniform_kaigaku_boots", item);
+        }
+        {
+            Item item = new ExtAcArmorItem(
+                    ModArmorMaterials.GENERIC_CLOTHES,
+                    EquipmentSlotType.CHEST,
+                    new Item.Properties().tab(ModItemGroups.TAB_MAIN))
+                    .setModelAccessor(ExtModelAccessors.UniformZenitsuItem::Modelclothes_tomioka)
+                    .setTexture("textures/models/uniform_kanroji.png");
+
+            UNIFORM_KANROJI = registerItem("uniform_kanroji", item);
         }
         {
             Item item = new ExtAcArmorItem(
