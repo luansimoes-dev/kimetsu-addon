@@ -42,8 +42,7 @@ public class ExtAcArmorItem extends ArmorItem {
 
             if (head != null)
                 armorModel.head = head;
-            if (body != null)
-                armorModel.body = body;
+            armorModel.body = body != null ? body : new ModelRenderer(armorModel);
             if (leftArm != null)
                 armorModel.leftArm = leftArm;
             if (rightArm != null)

@@ -8,6 +8,7 @@
   "client": [
     "models.MIXIN_UniformZenitsuItem_Modelclothes_tomioka",
     "models.MIXIN_UniformZenitsuItem_Modeluniform_boots",
+    "models.MIXIN_UniformItem_Modeluniform_pants",
     "models.MIXIN_ClothesKokushiboItem_Modelclothes",
     "models.MIXIN_SabitoMaskItem_Modelsabito_mask"
   ],

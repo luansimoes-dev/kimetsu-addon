@@ -1,6 +1,16 @@
 package org.kimetsuaddondevs.kimetsuaddon.models;
 
 public class ExtModelAccessors {
+    public static class UniformItem {
+        public static ExtModelAccessor Modeluniform_pants() {
+            net.mcreator.kimetsunoyaiba.item.UniformItem.Modeluniform_pants m = new net.mcreator.kimetsunoyaiba.item.UniformItem.Modeluniform_pants();
+            return (ExtModelAccessor) m;
+        }
+
+        private UniformItem() {
+        }
+    }
+
     public static class UniformZenitsuItem {
         public static ExtModelAccessor Modelclothes_tomioka() {
             net.mcreator.kimetsunoyaiba.item.UniformZenitsuItem.Modelclothes_tomioka m = new net.mcreator.kimetsunoyaiba.item.UniformZenitsuItem.Modelclothes_tomioka();

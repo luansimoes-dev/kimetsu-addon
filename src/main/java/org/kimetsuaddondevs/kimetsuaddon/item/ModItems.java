@@ -14,6 +14,8 @@ public class ModItems {
 
     public static final Item CLOTHES_UROKODAKI_CHESTPLATE;
 
+    public static final Item UNIFORM_PANTS_INOSUKE;
+
     public static final Item TOMIOKA_MASK;
     public static final Item TANJIRO_MASK;
 
@@ -47,6 +49,16 @@ public class ModItems {
                     .setTexture("textures/models/clothes_urokodaki_chestplate.png");
 
             CLOTHES_UROKODAKI_CHESTPLATE = registerItem("clothes_urokodaki_chestplate", item);
+        }
+        {
+            Item item = new ExtAcArmorItem(
+                    ModArmorMaterials.GENERIC_CLOTHES,
+                    EquipmentSlotType.LEGS,
+                    new Item.Properties().tab(ModItemGroups.TAB_MAIN))
+                    .setModelAccessor(ExtModelAccessors.UniformItem::Modeluniform_pants)
+                    .setTexture("textures/models/uniform_pants_inosuke.png");
+
+            UNIFORM_PANTS_INOSUKE = registerItem("uniform_pants_inosuke", item);
         }
         {
             Item item = new ExtAcArmorItem(
