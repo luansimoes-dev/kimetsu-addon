@@ -13,6 +13,7 @@ public class ModItems {
     public static final Item UNIFORM_KAIGAKU_BOOTS;
 
     public static final Item CLOTHES_UROKODAKI_CHESTPLATE;
+    public static final Item CLOTHES_KAIGAKU;
 
     public static final Item UNIFORM_PANTS_INOSUKE;
 
@@ -49,6 +50,16 @@ public class ModItems {
                     .setTexture("textures/models/clothes_urokodaki_chestplate.png");
 
             CLOTHES_UROKODAKI_CHESTPLATE = registerItem("clothes_urokodaki_chestplate", item);
+        }
+        {
+            Item item = new ExtAcArmorItem(
+                    ModArmorMaterials.GENERIC_CLOTHES,
+                    EquipmentSlotType.CHEST,
+                    new Item.Properties().tab(ModItemGroups.TAB_MAIN))
+                    .setModelAccessor(ExtModelAccessors.ClothesKaigakuItem::Modelclothes)
+                    .setTexture("textures/models/clothes_kaigaku.png");
+
+            CLOTHES_KAIGAKU = registerItem("clothes_kaigaku", item);
         }
         {
             Item item = new ExtAcArmorItem(

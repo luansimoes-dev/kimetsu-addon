@@ -36,6 +36,16 @@ public class ExtModelAccessors {
         }
     }
 
+    public static class ClothesKaigakuItem {
+        public static ExtModelAccessor Modelclothes() {
+            net.mcreator.kimetsunoyaiba.item.ClothesKaigakuItem.Modelclothes m = new net.mcreator.kimetsunoyaiba.item.ClothesKaigakuItem.Modelclothes();
+            return (ExtModelAccessor) m;
+        }
+
+        private ClothesKaigakuItem() {
+        }
+    }
+
     public static class SabitoMaskItem {
         public static ExtModelAccessor Modelsabito_mask() {
             net.mcreator.kimetsunoyaiba.item.SabitoMaskItem.Modelsabito_mask m = new net.mcreator.kimetsunoyaiba.item.SabitoMaskItem.Modelsabito_mask();
