@@ -1,11 +1,18 @@
 {
+  "required": true,
+  "minVersion": "0.8",
   "package": "org.kimetsuaddondevs.kimetsuaddon.mixins",
-  "mixins": [
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "mixins.kimetsuaddon.refmap.json",
+  "mixins": [],
+  "client": [
     "models.MIXIN_UniformZenitsuItem_Modelclothes_tomioka",
     "models.MIXIN_UniformZenitsuItem_Modeluniform_boots",
     "models.MIXIN_ClothesKokushiboItem_Modelclothes",
     "models.MIXIN_SabitoMaskItem_Modelsabito_mask"
   ],
-  "client": [],
-  "server": []
+  "server": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
 }

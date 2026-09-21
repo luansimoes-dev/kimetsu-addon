@@ -15,6 +15,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class ExtAcArmorItem extends ArmorItem {
+    private Supplier<ExtModelAccessor> modelAccessorSupplier = null;
     private ExtModelAccessor modelAccessor = null;
     private String texture = null;
 
@@ -28,6 +29,7 @@ public class ExtAcArmorItem extends ArmorItem {
     @SuppressWarnings("unchecked")
     public <A extends BipedModel<?>> A getArmorModel(LivingEntity entityLiving, ItemStack itemStack,
             EquipmentSlotType armorSlot, A _default) {
+        final ExtModelAccessor modelAccessor = getModelAccessor();
         if (modelAccessor != null) {
             BipedModel<?> armorModel = new BipedModel<>(1.0F);
 
@@ -69,8 +71,16 @@ public class ExtAcArmorItem extends ArmorItem {
     }
 
     public ExtAcArmorItem setModelAccessor(Supplier<ExtModelAccessor> supplier) {
-        modelAccessor = supplier.get();
+        modelAccessorSupplier = supplier;
         return this;
+    }
+
+    @OnlyIn(Dist.CLIENT)
+    private ExtModelAccessor getModelAccessor() {
+        if (modelAccessor == null && modelAccessorSupplier != null) {
+            modelAccessor = modelAccessorSupplier.get();
+        }
+        return modelAccessor;
     }
 
     public ExtAcArmorItem setTexture(String location) {

@@ -90,12 +90,14 @@ jar {
             "Implementation-Title": project.name,
             "Implementation-Version": "${version}",
             "Implementation-Vendor": "kimetsuaddondevs",
-            "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+            "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
+            "MixinConfigs": "mixins.kimetsuaddon.json"
         ])
     }
 }
 
 mixin {
+    add sourceSets.main, 'mixins.kimetsuaddon.refmap.json'
     config 'mixins.kimetsuaddon.json'
 }
 
